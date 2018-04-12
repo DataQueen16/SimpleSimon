@@ -1,23 +1,27 @@
 .layout {
-    border: 5px solid black;
+    border: 3px solid black;
     width: 25vw;
     height: 25vh;
     margin: 0;
     padding: 0;
 }
 
+#Big-Square {
+    border: 3px solid black;
+}
+
 #red {
-    border-radius: 150px 0px 0px;
+    border-top-left-radius: 100%;
 }
 
 #blue {
-    border-radius: 0px 0px 0px 150px;
+    border-bottom-left-radius: 100%;
 }
 
 #green {
-    border-radius: 0px 0px 150px;
+    border-bottom-right-radius: 100%;
 }
 
 #yellow {
-    border-radius: 0px 150px 0px 0px;
+    border-top-right-radius: 100%;
 }
