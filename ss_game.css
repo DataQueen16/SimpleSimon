@@ -1,0 +1,8 @@
+#red, #blue, #yellow, #green {
+    border: 2px solid black;
+    width: 25vw;
+    height: 25vh;
+    /*margin: 0;*/
+    /*padding: 0;*/
+}
+
