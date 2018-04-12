@@ -1,8 +1,23 @@
-#red, #blue, #yellow, #green {
-    border: 2px solid black;
+.layout {
+    border: 5px solid black;
     width: 25vw;
     height: 25vh;
-    /*margin: 0;*/
-    /*padding: 0;*/
+    margin: 0;
+    padding: 0;
 }
 
+#red {
+    border-radius: 150px 0px 0px;
+}
+
+#blue {
+    border-radius: 0px 0px 0px 150px;
+}
+
+#green {
+    border-radius: 0px 0px 150px;
+}
+
+#yellow {
+    border-radius: 0px 150px 0px 0px;
+}
