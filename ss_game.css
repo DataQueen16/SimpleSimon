@@ -1,13 +1,15 @@
-.layout {
-    border: 3px solid black;
-    width: 25vw;
-    height: 25vh;
-    margin: 0;
+.container {
+    width: 410px;
+    height: 410px;
     padding: 0;
 }
 
-#Big-Square {
-    border: 3px solid black;
+.layout {
+    float: left;
+    width: 200px;
+    height: 200px;
+    margin: 0;
+    padding: 0;
 }
 
 #red {
@@ -15,7 +17,7 @@
 }
 
 #blue {
-    border-bottom-left-radius: 100%;
+    border-top-right-radius: 100%;
 }
 
 #green {
@@ -23,5 +25,5 @@
 }
 
 #yellow {
-    border-top-right-radius: 100%;
+    border-bottom-left-radius: 100%;
 }
