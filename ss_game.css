@@ -16,6 +16,14 @@
     padding: 0;
 }
 
+.shadows:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+#start:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
 #red {
     border-top-left-radius: 100%;
 }

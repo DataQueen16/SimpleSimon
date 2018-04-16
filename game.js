@@ -112,7 +112,7 @@
 
         if ((i == randomColors.length - 1) && (clicks == randomColors[i])) {
             changeColors();
-            $('#round').html("Good job! Round " + (i + 1));
+            $('#round').html("Round " + (i + 1));
             i=0;
         } else if (clicks == randomColors[i]) { // If the click == index of the array
             i++;
