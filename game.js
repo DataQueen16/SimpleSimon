@@ -7,32 +7,31 @@
         return Math.floor(Math.random() * (max - min)) + min;
     }
 
-    function fadeInAndOut() {  // Takes generated number and fades out then in the corresponding colored dive
+    function fadeInAndOut() {  // Takes generated number and fades out then in the corresponding colored div
         var random = [1, 2, 3, 4];
         var randomNumber = getRandom();
         switch (randomNumber){
             case 1:
-                $('#red').fadeOut(500);
-                $('#red').fadeIn(500);
+                $('#red').fadeOut(250);
+                $('#red').fadeIn(250);
                 return 1;                   // returns 1 to be used in the compare function
 
             case 2:
-                $('#blue').fadeOut(500);
-                $('#blue').fadeIn(500);
+                $('#blue').fadeOut(250);
+                $('#blue').fadeIn(250);
                 return 2;                   // returns 2 to be used in the compare function
 
             case 3:
-                $('#green').fadeOut(500);
-                $('#green').fadeIn(500);
+                $('#green').fadeOut(250);
+                $('#green').fadeIn(250);
                 return 3;                   // returns 3 to be used in the compare function
 
             case 4:
-                $('#yellow').fadeOut(500);
-                $('#yellow').fadeIn(500);
+                $('#yellow').fadeOut(250);
+                $('#yellow').fadeIn(250);
                 return 4;                   // returns 4 to be used in the compare function
         }
     }
-    //fadeInAndOut();
 
 
 
@@ -56,7 +55,10 @@
 
     var randomColors = [];      // Create a randomColors array
 
-    changeColors();
+    $('#start').click( function () {
+        changeColors();
+    });
+
     clickDiv();
 
 
@@ -68,29 +70,29 @@
         randomColors.push(color);   // Add result of fadeInAndOut to end of randomColors array
         console.log(randomColors);
 
-        var intervalId = setInterval(colorSwitch, 1500);
+        var intervalId = setInterval(colorSwitch, 500);
         var i = 0;
         function colorSwitch() {
             if (i < randomColors.length) {
                 switch (randomColors[i]) {
                     case 1:
-                        $('#red').fadeOut(750);
-                        $('#red').fadeIn(750);
+                        $('#red').fadeOut(250);
+                        $('#red').fadeIn(250);
                         i++;
                         break;
                     case 2:
-                        $('#blue').fadeOut(750);
-                        $('#blue').fadeIn(750);
+                        $('#blue').fadeOut(250);
+                        $('#blue').fadeIn(250);
                         i++;
                         break;
                     case 3:
-                        $('#green').fadeOut(750);
-                        $('#green').fadeIn(750);
+                        $('#green').fadeOut(250);
+                        $('#green').fadeIn(250);
                         i++;
                         break;
                     case 4:
-                        $('#yellow').fadeOut(750);
-                        $('#yellow').fadeIn(750);
+                        $('#yellow').fadeOut(250);
+                        $('#yellow').fadeIn(250);
                         i++;
                         break;
                 }
@@ -108,55 +110,17 @@
 
     function Compare(clicks) {  // Comparing clicks to the set of random numbers as they're created
 
-        //var num = getRandom();  // Assign variable num to result of fadeInAndOut function - #
-        //master.push(clicks); // Add num variable to end of the master array
-
         if ((i == randomColors.length - 1) && (clicks == randomColors[i])) {
             changeColors();
+            $('#round').html("Round " + (i + 1));
         } else if (clicks == randomColors[i]) { // If the click == index of the array
             i++;
         } else {
             i = 0;
+            alert("I'm sorry, that's incorrect! You have to start all over dear....");
         }
     }
 
 
 
-
-
-
-
-
-
-
-    // function thisDiv() {  // Takes the result of user click and adds to the end of the array
-    //
-    //     var num = clickDiv(); // Assigns result of click to a variable
-    //     var clickedDivs = [];  // Creates an empty array
-    //
-    //     var i = 0;  // Counter for adding elements to the array
-    //
-    //     if (i < clickedDivs.length) { //
-    //         switch (num) {
-    //             case 1:
-    //                 clickedDivs.push(1);
-    //                 console.log(clickedDivs);
-    //                 return clickedDivs;
-    //             case 2:
-    //                 clickedDivs.push(2);
-    //                 console.log(clickedDivs);
-    //                 return clickedDivs;
-    //             case 3:
-    //                 clickedDivs.push(3);
-    //                 console.log(clickedDivs);
-    //                 return clickedDivs;
-    //             case 4:
-    //                 clickedDivs.push(4);
-    //                 console.log(clickedDivs);
-    //                 return clickedDivs;
-    //         }
-    //         i++;
-    //     }
-    //
-    // } thisDiv();
 })();

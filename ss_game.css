@@ -4,6 +4,10 @@
     padding: 0;
 }
 
+.width {
+    width: 150px;
+}
+
 .layout {
     float: left;
     width: 200px;
